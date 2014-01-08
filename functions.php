@@ -1,16 +1,16 @@
 <?php
-function bigflag_widgets_init() {
+function widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'bigflag' ),
+		'name' => __( 'Main Sidebar', '' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'bigflag' ),
+		'description' => __( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', '' ),
 		'before_widget' => '<aside id="%1$s" class="%2$s">',
 		'after_widget' => "\n</aside>",
 		'before_title' => "\n<h3 class=\"widget-title\">",
 		'after_title' => "</h3>\n",
 	) );
 }
-add_action( 'widgets_init', 'bigflag_widgets_init' );
+add_action( 'widgets_init', 'widgets_init' );
 
 /**
  * 20131204追記
